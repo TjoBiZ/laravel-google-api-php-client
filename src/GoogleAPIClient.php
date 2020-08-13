@@ -21,15 +21,15 @@ use Google_Client;
 
 class GoogleAPIClient {
     public function getClient() {
-        echo 'test';
-        $tsrst = 'rstrst';
+//        echo 'test';
+//        $tsrst = 'rstrst';
         $config = config('service');
-        //return new Google_Client();
+        $client =  new Google_Client();
         putenv('GOOGLE_APPLICATION_CREDENTIALS=/path/to/service-account.json');
-        $client = new Google_Client();
         $client->useApplicationDefaultCredentials();
         $client->addScope(Google_Service_Drive::DRIVE);
         $client->setSubject('');
-        return 'Hello world';
+        //return 'Hello world';
+        return $client;
     }
 }
