@@ -1,0 +1,42 @@
+{
+    "name": "tjobiz/google-api-php-client",
+    "description": "Laravel package of Google API PHP client",
+    "type": "library",
+    "require": {
+        "php": "7.4.7",
+        "google/apiclient": "^2.7"
+    },
+    "require-dev": {
+        "google/apiclient": "^2.7",
+        "orchestra/testbench": "^5.3"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Roman",
+            "email": "j@tjo.biz"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "GoogleAPI\\": "./src"
+
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "GoogleAPI\\tests\\": "./tests"
+
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "GoogleAPI\\ServiceProvider"
+            ],
+            "aliases": {
+                "GoogleAPI": "GoogleAPI\\Facade"
+            }
+        }
+    }
+}
