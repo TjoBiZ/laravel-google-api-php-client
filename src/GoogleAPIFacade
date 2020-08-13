@@ -1,0 +1,13 @@
+<?php
+
+namespace GoogleAPI;
+
+use Illuminate\Support\Facades\Facade;
+
+class GoogleAPIFacade extends Facade {
+
+    public static function getFacadeAccessor() {
+        return GoogleAPIClient::class;
+    }
+
+}

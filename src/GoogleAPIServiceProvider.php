@@ -13,8 +13,22 @@ class GoogleAPIServiceProvider extends MainServiceProvider {
     public function boot()
     {
         $this->publishes([
-            __DIR__.'/path/to/config/courier.php' => config_path('courier.php'),
+            __DIR__.'/../configs/google-api.php' => config_path('google-api.php'),
         ]);
+    }
+
+    /**
+     * Register any application services.
+     *
+     * @return void
+     */
+    public function register()
+    {
+        $this->mergeConfigFrom(
+            __DIR__.'/../configs/google-api.php', 'google-api'
+        );
+
+        $this->app->bind( GoogleAPIClient::class );
     }
 
 }

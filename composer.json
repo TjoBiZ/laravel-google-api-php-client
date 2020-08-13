@@ -32,10 +32,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "GoogleAPI\\ServiceProvider"
+                "GoogleAPI\\GoogleAPIServiceProvider"
             ],
             "aliases": {
-                "GoogleAPI": "GoogleAPI\\Facade"
+                "GoogleAPI": "GoogleAPI\\GoogleAPIFacade"
             }
         }
     }
